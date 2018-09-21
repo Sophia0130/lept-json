@@ -2,7 +2,7 @@
 
 // lept_type     json的数值类型                    枚举
 // lept_value    json的数值类型                    结构体-lept_type
-// lept_context  json当前字符串的位置              结构体-字符指针
+// lept_context  json当前字符串的位置               结构体-字符指针
 //               json合法性                        int
 
 #include "leptjson.h"
@@ -21,7 +21,7 @@ static void lept_parse_whitespace(lept_context* c) {
     const char *p = c->json;
     while (*p == ' ' || *p == '\t' || *p == '\n' || *p == '\r')
         p++;
-    c->json = p;  // json此时指向的字符串不是空格，可能是字符，或是字符的结束
+    c->json = p;        // json此时指向的字符串不是空格，可能是字符，或是字符的结束
 }
 
 // 判断是否为 true
